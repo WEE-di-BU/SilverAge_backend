@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /silver
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/SilverAge
+    username: admin
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  security:
+    filter:
+      order: -100  # Spring Security 过滤器顺序（可选）
+  rabbitmq:
+    addresses: localhost
+    username: root
+    password: 12345678
+    virtual-host: /
+
+springdoc:
+  swagger-ui:
+    path: /doc/ui/
+  api-docs:
+    path: /doc/json
+
+# 自定义 JWT 配置（放在顶层，非 spring 节点下）
+jwt:
+  secret: secret  # 替换为你的 JWT 密钥（任意字符串）
+  expiration: 3600  # 过期时间（秒）
