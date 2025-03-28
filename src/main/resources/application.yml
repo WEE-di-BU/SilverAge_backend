@@ -28,3 +28,10 @@ springdoc:
 jwt:
   secret: secret  # 替换为你的 JWT 密钥（任意字符串）
   expiration: 3600  # 过期时间（秒）
+
+# Python模型接口地址
+python:
+  model:
+    cardiovascular-url: http://localhost:5000/cardiovascular-predict
+    hypertension-url: http://localhost:5000/hypertension-predict
+    glycuresis-url: http://localhost:5000/glycuresis-predict
